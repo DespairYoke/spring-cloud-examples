@@ -37,7 +37,7 @@ services:
      networks:
        - swarm-example
 
-  sign-online-gateway:
+  zuul-gateway:
      image: 239206511/zuul-gateway:v1.0.0
      deploy:
        replicas: 1
