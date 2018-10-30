@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      profile:
+      name: config-server
+      server:
+        git:
+          uri: https://github.com/love-dl-forever/spring-cloud-starter/
+          search-paths: conf
+          username: love-dl-forever                                        # git仓库的账号
+          password: a810095178
+                                               # git仓库的密码
+        native:
+          search-locations: conf
+
+  profiles: native
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8090/eureka/
