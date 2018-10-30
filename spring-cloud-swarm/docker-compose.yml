@@ -4,7 +4,7 @@ services:
   eureka-server:
      image: 239206511/eureka-server:v1.0.0
      deploy:
-       replicas: 3
+       replicas: 2
        update_config:
          parallelism: 2
          delay: 10s
@@ -70,4 +70,4 @@ services:
 
 networks:
   swarm-example:
-    driver: bridge
+    driver: overlay
