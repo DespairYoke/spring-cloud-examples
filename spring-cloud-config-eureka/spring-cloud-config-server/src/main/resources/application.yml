@@ -14,7 +14,8 @@ spring:
 
         native:
           search-locations: /work/neo-config      #neo-config在本地的相对路径
-  profiles: native
+  profiles: 
+    active: native
 eureka:
   client:
     serviceUrl:
