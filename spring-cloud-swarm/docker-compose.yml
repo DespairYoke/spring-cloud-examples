@@ -4,7 +4,7 @@ services:
   eureka-server:
      image: 239206511/eureka-server:v1.0.0
      deploy:
-       replicas: 2
+       replicas: 1
        update_config:
          parallelism: 2
          delay: 10s
@@ -20,6 +20,13 @@ services:
 
   config-server:
      image: 239206511/config-server:v1.0.0
+     deploy:
+       replicas: 1
+       update_config:
+         parallelism: 2
+         delay: 10s
+       restart_policy:
+         condition: on-failure
      restart: always
      container_name: config-server
      hostname: config-server
@@ -32,6 +39,13 @@ services:
 
   sign-online-gateway:
      image: 239206511/zuul-gateway:v1.0.0
+     deploy:
+       replicas: 1
+       update_config:
+         parallelism: 2
+         delay: 10s
+       restart_policy:
+         condition: on-failure
      restart: always
      container_name: zuul-gateway
      hostname: zuul-gateway
@@ -44,6 +58,13 @@ services:
 
   client-server1:
      image: 239206511/client-server1:v1.0.0
+     deploy:
+       replicas: 1
+       update_config:
+         parallelism: 2
+         delay: 10s
+       restart_policy:
+         condition: on-failure
      restart: always
      container_name: client-server1
      hostname: client-server1
@@ -57,6 +78,13 @@ services:
 
   client-server2:
      image: 239206511/client-server2:v1.0.0
+     deploy:
+       replicas: 1
+       update_config:
+         parallelism: 2
+         delay: 10s
+       restart_policy:
+         condition: on-failure
      restart: always
      container_name: client-server2
      hostname: client-server2
