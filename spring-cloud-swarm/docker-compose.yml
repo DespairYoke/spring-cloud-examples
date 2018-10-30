@@ -85,7 +85,6 @@ services:
        restart_policy:
          condition: on-failure
      restart: always
-     container_name: client-server2
      hostname: client-server2
      ports:
        - "8084:8084"
