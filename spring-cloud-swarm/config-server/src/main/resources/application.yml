@@ -7,13 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/love-mh-forever/spring-cloud-examples/tree/master/spring-cloud-swarm
-          search-paths: conf
+          uri: https://github.com/love-mh-forever/spring-cloud-examples.git
+          search-paths: spring-cloud-swarm/conf
           username: love-dl-forever                                        # git仓库的账号
           password: a810095178
                                                # git仓库的密码
         native:
-          search-locations: conf
+          search-locations: conf    #项目的相对路径
 
   profiles:
     active: git
