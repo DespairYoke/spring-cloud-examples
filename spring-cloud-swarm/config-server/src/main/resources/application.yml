@@ -16,7 +16,7 @@ spring:
           search-locations: conf
 
   profiles:
-    active: native
+    active: git
 
 eureka:
   client:
