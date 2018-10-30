@@ -7,7 +7,7 @@ spring:
       label: master
       discovery:
         enabled: true
-        service-id: client-server1
+        service-id: config-server
 server:
   port: 8081
 eureka:

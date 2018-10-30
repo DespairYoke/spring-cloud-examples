@@ -1,13 +1,13 @@
+server:
+  port: 8082
 spring:
   application:
     name: config-server
   cloud:
     config:
-      profile:
-      name: config-server
       server:
         git:
-          uri: https://github.com/love-dl-forever/spring-cloud-starter/
+          uri: https://github.com/love-mh-forever/spring-cloud-examples/tree/master/spring-cloud-swarm
           search-paths: conf
           username: love-dl-forever                                        # git仓库的账号
           password: a810095178
@@ -15,9 +15,9 @@ spring:
         native:
           search-locations: conf
 
-  profiles: native
-server:
-  port: 8082
+  profiles:
+    active: native
+
 eureka:
   client:
     service-url:

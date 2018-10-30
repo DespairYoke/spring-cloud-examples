@@ -3,6 +3,7 @@ package zwd.com.zuul.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.exception.ZuulException;
 
+
 /**
  * @author zwd
  * @date 2018/10/30 08:58
@@ -11,21 +12,22 @@ import com.netflix.zuul.exception.ZuulException;
 public class MyFilter extends ZuulFilter{
     @Override
     public String filterType() {
-        return null;
+        return "pre";
     }
 
     @Override
     public int filterOrder() {
-        return 0;
+        return 10;
     }
 
     @Override
     public boolean shouldFilter() {
-        return false;
+        return true;
     }
 
     @Override
     public Object run() throws ZuulException {
+        System.out.println("zuul filter");
         return null;
     }
 }
