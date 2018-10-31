@@ -10,7 +10,7 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     container_name: eureka-server
+     name: eureka-server
      hostname: eureka-server
      ports:
        - "8090:8090"
@@ -30,6 +30,7 @@ services:
        restart_policy:
          condition: on-failure
      restart: always
+     name: eureka-server
      hostname: config-server
      ports:
         - "8082:8082"
