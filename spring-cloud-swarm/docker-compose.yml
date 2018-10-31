@@ -14,7 +14,9 @@ services:
      hostname: eureka-server
      ports:
        - "8090:8090"
-
+     volumes:
+       - /etc/timezone:/etc/timezone
+       - /etc/localtime:/etc/localtime
      networks:
        - swarm-example
 
@@ -33,6 +35,9 @@ services:
         - "8082:8082"
      depends_on:
         - eureka-server
+     volumes:
+       - /etc/timezone:/etc/timezone
+       - /etc/localtime:/etc/localtime
      networks:
        - swarm-example
 
@@ -51,6 +56,9 @@ services:
        - "8083:8083"
      depends_on:
        - eureka-server
+     volumes:
+       - /etc/timezone:/etc/timezone
+       - /etc/localtime:/etc/localtime
      networks:
        - swarm-example
 
@@ -58,6 +66,8 @@ services:
      image: 239206511/client-server1:v1.0.0
      deploy:
        replicas: 1
+       placement:
+         constraints: [node.role == manager]
        update_config:
          parallelism: 2
          delay: 10s
@@ -70,6 +80,9 @@ services:
      depends_on:
        - eureka-server
        - config-server
+     volumes:
+       - /etc/timezone:/etc/timezone
+       - /etc/localtime:/etc/localtime
      networks:
        - swarm-example
 
@@ -89,6 +102,9 @@ services:
      depends_on:
        - eureka-server
        - config-server
+     volumes:
+       - /etc/timezone:/etc/timezone
+       - /etc/localtime:/etc/localtime
      networks:
        - swarm-example
 
