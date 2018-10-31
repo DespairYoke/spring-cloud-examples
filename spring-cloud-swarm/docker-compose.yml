@@ -11,6 +11,7 @@ services:
        restart_policy:
          condition: on-failure
      hostname: eureka-server
+     container_name: eureka-server
      ports:
        - "8090:8090"
      volumes:
@@ -29,6 +30,7 @@ services:
        restart_policy:
          condition: on-failure
      hostname: config-server
+     container_name: config-server
      ports:
         - "8082:8082"
      depends_on:
@@ -49,6 +51,7 @@ services:
        restart_policy:
          condition: on-failure
      hostname: zuul-gateway
+     container_name: zuul-gateway
      ports:
        - "8083:8083"
      depends_on:
@@ -71,6 +74,7 @@ services:
        restart_policy:
          condition: on-failure
      hostname: client-server1
+     container_name: client-server1
      ports:
        - "8081:8081"
      depends_on:
@@ -92,6 +96,7 @@ services:
        restart_policy:
          condition: on-failure
      hostname: client-server2
+     container_name: client-server2
      ports:
        - "8084:8084"
      depends_on:
