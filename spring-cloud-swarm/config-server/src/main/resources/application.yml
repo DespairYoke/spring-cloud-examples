@@ -1,8 +1,8 @@
-server:
-  port: 8082
 spring:
   application:
     name: config-server
+server:
+  port: 8082
   cloud:
     config:
       server:
@@ -14,7 +14,8 @@ spring:
           timeout: 2000
                                                # git仓库的密码
         native:
-          search-locations: conf    #项目的相对路径
+          search-locations: conf
+        bootstrap: true   #项目的相对路径
 
   profiles:
     active: git
