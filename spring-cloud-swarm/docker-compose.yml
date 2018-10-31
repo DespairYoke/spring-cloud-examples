@@ -28,7 +28,6 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     restart: always
      hostname: config-server
      ports:
         - "8082:8082"
@@ -49,7 +48,6 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     restart: always
      hostname: zuul-gateway
      ports:
        - "8083:8083"
