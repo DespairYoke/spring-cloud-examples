@@ -11,13 +11,13 @@ spring:
           search-paths: spring-cloud-swarm/conf
           username: love-dl-forever                                        # git仓库的账号
           password: a810095178
+          timeout: 2000
                                                # git仓库的密码
         native:
           search-locations: conf    #项目的相对路径
 
   profiles:
     active: git
-
 eureka:
   client:
     service-url:
