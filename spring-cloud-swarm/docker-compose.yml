@@ -10,7 +10,6 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     name: eureka-server
      hostname: eureka-server
      ports:
        - "8090:8090"
