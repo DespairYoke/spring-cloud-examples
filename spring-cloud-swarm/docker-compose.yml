@@ -70,7 +70,6 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     restart: always
      hostname: client-server1
      ports:
        - "8081:8081"
@@ -92,7 +91,6 @@ services:
          delay: 10s
        restart_policy:
          condition: on-failure
-     restart: always
      hostname: client-server2
      ports:
        - "8084:8084"
