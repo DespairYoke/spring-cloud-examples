@@ -58,8 +58,6 @@ services:
      image: 239206511/client-server1:v1.0.0
      deploy:
        replicas: 1
-       placement:
-         constraints: [node.role == manager]
        update_config:
          parallelism: 2
          delay: 10s
