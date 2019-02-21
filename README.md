@@ -16,7 +16,7 @@
 
 * [Sleuth调用链路跟踪](./sleuth.md)
 
-* Bus消息总线
+* [Bus消息总线](./bus.md)
 
 * 基于Hystrix实现接口降级实战
 
