@@ -14,7 +14,7 @@
 
 * [Config分布式统一配置中心](./config.md)
 
-* Sleuth调用链路跟踪
+* [Sleuth调用链路跟踪](./sleuth.md)
 
 * Bus消息总线
 
