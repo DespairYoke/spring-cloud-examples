@@ -15,7 +15,7 @@
 </dependency>
 ```
 - 创建文件夹和文件供后续使用
-实例：在[spring-cloud]()下创建config-repo，在config-repo创建config-client-dev.properties供后续使用
+实例：在[spring-cloud-examples]()下创建config-repo，在config-repo创建config-client-dev.properties供后续使用
 文件内容
 ```properties
 foo = foo version 21
