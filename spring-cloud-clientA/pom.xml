@@ -10,7 +10,7 @@
 	<!--</parent>-->
 	<parent>
 		<groupId>com.java.advance</groupId>
-		<artifactId>spring-cloud</artifactId>
+		<artifactId>spring-cloud-example</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.example.zwd</groupId>
